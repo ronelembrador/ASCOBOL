@@ -25,5 +25,6 @@
            MOVE "JOHN    RYAN" TO StudentName.
            DISPLAY StudentName.
            MOVE ALL "x" TO StudentName.
+           DISPLAY StudentName.
            STOP RUN.
        END PROGRAM MovePractice.
