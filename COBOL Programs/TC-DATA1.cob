@@ -5,7 +5,7 @@
       * Tectonics: cobc
       ******************************************************************
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. YOUR-PROGRAM-NAME.
+       PROGRAM-ID. TC-DATA1.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        01  StudentName PIC X(6) VALUE ZEROS.
@@ -26,4 +26,4 @@
            DISPLAY "Other Name: ", OtherName.
            DISPLAY "Shop Total: ", ShopTotal.
            STOP RUN.
-       END PROGRAM YOUR-PROGRAM-NAME.
+       END PROGRAM TC-DATA1.

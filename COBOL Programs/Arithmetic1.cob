@@ -83,6 +83,20 @@
            END-MULTIPLY.
            DISPLAY Fees, " ", Members, " ", TotalFees.
            DISPLAY "DIVIDE EXAMPLES".
-
+           DISPLAY Amount1, " ",  Amount2.
+           DIVIDE 15 INTO Amount1 ROUNDED, Amount2.
+           DISPLAY Amount1, " ", Amount2.
+           DISPLAY Qty, " ", Units, " ", Average.
+           DIVIDE Qty BY Units GIVING Average ROUNDED.
+           DISPLAY Qty, " ", Units, " ", Average.
+           DISPLAY Quot, " ", Rem.
+           DIVIDE 215 BY 10 GIVING Quot REMAINDER Rem.
+           DISPLAY Quot, " ", Rem.
+           DISPLAY Result.
+           COMPUTE Result = 90 - 7 * 3 + 50 / 2.
+           DISPLAY Result.
+           DISPLAY Euros, " ", Punts.
+           COMPUTE Euros ROUNDED = Punts / .78754.
+           DISPLAY Euros, " ", Punts.
 
        END PROGRAM Arithmetic1.
