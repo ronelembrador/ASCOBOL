@@ -44,21 +44,6 @@
        01  PrintLine                   PIC X(65).
 
 
-      * The StudentDetails record has the description shown below.
-      * But in this program we don't need to refer to any of the items in
-      * the record and so we have described it as PIC X(32)
-      * 01 StudentDetails
-      *    02  StudentId       PIC 9(7).
-      *    02  StudentName.
-      *        03 Surname      PIC X(8).
-      *        03 Initials     PIC XX.
-      *    02  DateOfBirth.
-      *        03 YOBirth      PIC 9(4).
-      *        03 MOBirth      PIC 9(2).
-      *        03 DOBirth      PIC 9(2).
-      *    02  CourseCode      PIC X(4).
-      *    02  Gender          PIC X.
-
        SD  WorkFile.
        01  WorkRecord.
            02  WCustID                 PIC 9(5).
@@ -84,23 +69,25 @@
            02  FILLER REDEFINES Oil-Cost-VALUES.
                03 OIL-COST           PIC 99V99 OCCURS 30 TIMES.
 
+       01  OilSold                     PIC 9(4).
+       01  SaleValue                   PIC 9(7)V99.
+
+
+       01  HeadingLine.
+           02  FILLER                  PIC X(14) VALUE "              ".
+           02  Title                   PIC X(30)
+                       VALUE "AROMAMORA SUMMARY SALES REPORT".
+       01  Uline.
+           02  FILLER                  PIC X(13) VALUE "             ".
+           02  Hline                   PIC X(32)
+                       VALUE "-------------------------------".
+
+
+
+
+
        PROCEDURE DIVISION.
        Begin.
-           SORT WorkFile ON ASCENDING KEY WStudentId
-                INPUT PROCEDURE IS GetStudentDetails
-                GIVING StudentFile.
-       STOP RUN.
 
 
-       GetStudentDetails.
-           DISPLAY "Enter student details using template below."
-           DISPLAY "Enter no data to end.".
-           DISPLAY "Enter - StudId, Surname, Initials, YOB, MOB, DOB, ",
-           "Course, Gender"
-           DISPLAY "NNNNNNNSSSSSSSSIIYYYYMMDDCCCCG"
-           ACCEPT  WorkRec.
-           PERFORM UNTIL WorkRec = SPACES
-               RELEASE WorkRec
-               ACCEPT WorkRec
-           END-PERFORM.
        END PROGRAM AromaSales.
