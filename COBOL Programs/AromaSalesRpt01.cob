@@ -74,13 +74,12 @@
 
 
        01  HeadingLine.
-           02  FILLER                  PIC X(14) VALUE "              ".
+           02  FILLER                  PIC X(14) VALUE SPACES.
            02  Title                   PIC X(30)
                        VALUE "AROMAMORA SUMMARY SALES REPORT".
        01  Uline.
-           02  FILLER                  PIC X(13) VALUE "             ".
-           02  Hline                   PIC X(32)
-                       VALUE "-------------------------------".
+           02  FILLER                  PIC X(13) VALUE SPACES.
+           02  Hline                   PIC X(32) VALUE ALL "-".
 
 
 
