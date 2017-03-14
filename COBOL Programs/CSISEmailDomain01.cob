@@ -43,7 +43,11 @@
 
        FD  WorkFile.
        01  WorkRec.
-
+           02 StudentNameWF            PIC X(25).
+           02 GradYearWF               PIC 9(4).
+           02 CourseCodeWF             PIC 9.
+           02 EmailDomainNameWF        PIC X(20).
+           02 CountryCodeWF            PIC XX.
 
 
 
