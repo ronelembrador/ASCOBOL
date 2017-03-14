@@ -59,6 +59,19 @@
 
 
        WORKING-STORAGE SECTION.
+       01  CourseTable.
+           02 CourseValues.
+               03 FILLER   PIC X(25) VALUE "Computer Systems".
+               03 FILLER   PIC X(25) VALUE "Grad. Dip. Computing".
+               03 FILLER   PIC X(25) VALUE "Grad. Dip. Localisation".
+               03 FILLER   PIC X(25) VALUE "Grad. Dip. Music".
+               03 FILLER   PIC X(25) VALUE "Computing with French".
+
+       01  CountryTable.
+           02 Country OCCURS 243 TIMES.
+               03 CountryCode              PIC XX.
+               03 CountryName              PIC X(26).
+
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
             DISPLAY "Hello world"
