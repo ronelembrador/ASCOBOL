@@ -47,7 +47,7 @@ class News extends CI_Controller {
         $this->form_validation->set_rules('nickname', 'Nickname', 'required|alpha');
         $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email');
         $this->form_validation->set_rules('address', 'Address', '');
-        $this->form_validation->set_rules('gender', 'Gender', 'required|max_length[4]|in_list[M,F,Male,Female]|alpha');
+        $this->form_validation->set_rules('gender', 'Gender', 'required|max_length[6]|in_list[M,F,Male,Female]|alpha');
         $this->form_validation->set_rules('cellno', 'Cellphone #', 'required|numeric|max_length[11]|is_natural');
         $this->form_validation->set_rules('comments', 'comments', '');
 
@@ -89,7 +89,7 @@ class News extends CI_Controller {
         $this->form_validation->set_rules('nickname', 'Nickname', 'required|alpha');
         $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email');
         $this->form_validation->set_rules('address', 'Address', '');
-        $this->form_validation->set_rules('gender', 'Gender', 'required|max_length[4]|in_list[M,F,Male,Female]|alpha');
+        $this->form_validation->set_rules('gender', 'Gender', 'required|max_length[6]|in_list[M,F,Male,Female]|alpha');
         $this->form_validation->set_rules('cellno', 'Cellphone #', 'required|numeric|max_length[11]|is_natural');
         $this->form_validation->set_rules('comments', 'comments', '');
  
