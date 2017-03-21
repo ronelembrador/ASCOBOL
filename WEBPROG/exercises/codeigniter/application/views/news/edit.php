@@ -18,7 +18,7 @@
         </tr>
         <tr>
             <td><label for="nickname">Nickname</label></td>
-            <td><input type="input" name="nickanme" size="30" value="<?php echo $news_item['nickname'] ?>" ></textarea></td>
+            <td><input type="input" name="nickname" size="30" value="<?php echo $news_item['nickname'] ?>" ></textarea></td>
         </tr>
         <tr>
             <td><label for="email">Email</label></td>

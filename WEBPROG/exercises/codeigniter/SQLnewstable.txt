@@ -6,15 +6,13 @@ CREATE TABLE IF NOT EXISTS `news` (
   `title` varchar(128) NOT NULL,
   `slug` varchar(128) NOT NULL,
   `text` text NOT NULL,
-  `name` text NOT NULL,
-  `nickname` varchar(100) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `nickname` varchar(20) NOT NULL,
   `email` varchar(128) NOT NULL UNIQUE,
   `address` varchar(128),
   `gender` varchar(6) NOT NULL,
   `cellno` bigint(11) NOT NULL,
   `comments` varchar(255),
-  CONSTRAINT chk_gender CHECK (gender IN ('M', 'F', 'Male', 'Female')),
-  CONSTRAINT nickname CHECK (nickname NOT LIKE '%[^A-Z]%'),
   PRIMARY KEY (`id`),
   KEY `slug` (`slug`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
