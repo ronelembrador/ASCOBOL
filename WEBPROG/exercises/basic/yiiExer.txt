@@ -1,0 +1,18 @@
+Yii2 exercise
+- create a yii2 version of codeigniter exercise
+- follow the data validation rules defined for each field
+  gender: radio button data type char(1) M/F
+- rename the table to profile
+- create a new table called trivia
+  fields: id: (primary)
+	  question: varchar 100 (required)
+	  answer: varchar 100 (required)
+	  profile_id: foreign key to profile table
+- generate model and generate CRUD for the 2 tables
+
+Customize your yii code to do the following:
+- profile_id field in trivia table becomes a dropdown field displaying the full name field from the profile table
+- when you click to view one profile record, the profile fields will be displayed, and then below this, all the trivia questions and answers from the trivia table which is related to the selected profile.
+
+- add javascript to display each trivia question and hide the answer
+- provide a javascript button "display answer" that will display the answer for the specific question when clicked
