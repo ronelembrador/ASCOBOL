@@ -34,12 +34,23 @@ class Profile extends \yii\db\ActiveRecord
     {
         return [
             [['slug', 'name', 'nickname', 'email', 'gender', 'cellno'], 'required'],
-            [['cellno'], 'integer'],
+            [['cellno'], 'integer', 'message' => 'Cellno only accepts numbers'],
             [['slug', 'email', 'address'], 'string', 'max' => 128],
             [['name', 'nickname'], 'string', 'max' => 20],
+            [['comments', 'address'], 'default'],
+            [['name'], 'match' ,
+            'pattern'=> '/^[A-Za-z0-9_ ]+$/u',
+            'message'=> 'Name only accepts letters and numbers'],
+            [['nickname'], 'match' ,
+            'pattern'=> '/^[A-Za-z_ ]+$/u',
+            'message'=> 'Nickname only accepts letters'],
             [['gender'], 'string', 'max' => 6],
+            [['gender'], 'in', 
+            'range' => ['M', 'F', 'Male', 'Female'],
+            'message' => 'Gender must be one of the following: M, F, Male, Female'],
             [['comments'], 'string', 'max' => 255],
-            [['email'], 'unique'],
+            [['email'],  'unique'],
+            [['email'],  'email'],
         ];
     }
 
