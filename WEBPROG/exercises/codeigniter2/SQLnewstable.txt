@@ -1,0 +1,25 @@
+DROP TABLE news
+
+
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(128) NOT NULL,
+  `slug` varchar(128) NOT NULL,
+  `text` text NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `nickname` varchar(20) NOT NULL,
+  `email` varchar(128) NOT NULL UNIQUE,
+  `address` varchar(128),
+  `gender` varchar(6) NOT NULL,
+  `cellno` bigint(11) NOT NULL,
+  `comments` varchar(255),
+  PRIMARY KEY (`id`),
+  KEY `slug` (`slug`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+INSERT INTO `news` (`id`, `title`, `slug`, `text`,`name`,`nickname`,`email`,`address`,`gender`,`cellno`,`comments`) VALUES
+(1, 'Test', 'test', 'Hello World !!', 'Ronel Embrador', 'Choy', 'ronelembrador@gmail.com', '12345 Banana St.','Male', '09151479911','Trial Comment'),
+(2, 'What is Lorem Ipsum?', 'what-is-lorem-ipsum', 'Lorem Ipsum is simply dummy text.', 'Bobby Kim', 'Bakim1234', 'bakim1234@gmail.com', '', 'Alien','12312414','');
+
+09151479911
